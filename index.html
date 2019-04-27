@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Docsify Starter Kit by Alok Prateek</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!--<link rel="stylesheet" href="vendor/themes/vue.css" disabled>-->
+  <!-- Add Normailze CSS
+  <link rel="stylesheet" href="vendor/normalize.css">-->
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="custom/theme-simple.css" title="Simple">
+  <!-- Alternate Stylesheets -->
+  <link rel="stylesheet alternate" href="custom/theme-simple-dark.css" title="Simple Dark">
+  <link rel="stylesheet" href="vendor/prism/prism-okaidia.css">
+  <link rel="stylesheet" href="custom/custom.css">
+  <script src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+
+</head> 
+  
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Docsify Starter Kit',
+      coverpage: true,
+      onlyCover: true,
+      loadSidebar: true,
+      autoHeader: true,
+      loadNavbar: true,
+      subMaxLevel: 4,
+      auto2top: true,
+      executeScript: true,
+      logo: '/_media/logo.png',
+      notFoundPage: true,
+      ga: 'UA-xxxxxxxxx-1',
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<a onclick="generatePDF()" class="btn-other" style="display: inline-block" id="gen-pdf">Generate PDF</a><a class="btn-other" id="dld-pdf" style="display:none;">Download PDF</a>',
+            '</footer>'
+          ].join('');
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        }
+      ],
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        depth: 2,
+        hideOtherSidebarContent: false,
+        themeable: {
+          readyTransition: true,
+          responsiveTables: true,
+        }
+      }
+    }
+  </script>
+  <script src="vendor/docsify.js"></script>
+  <script src="vendor/plugins/ga.min.js"></script>
+  <script src="vendor/plugins/search.min.js"></script>
+  <script src="vendor/plugins/docsify-copy-code.min.js"></script>
+  <script src="vendor/plugins/pdfobject.min.js"></script> 
+  <script src="vendor/plugins/docsify-pdf-embed.js"></script>
+  <script>
+    function generatePDF(){
+    var filename_header = window.document.querySelector('section.content h1 a span');
+    var filename = filename_header.innerHTML +'.pdf';    
+    var mdfile = document.getElementsByTagName('body')[0].getAttribute('data-page');
+    var pdffile_path = '/' + mdfile.slice(0, -3) +'.pdf';
+    var dldbtn = document.getElementById('dld-pdf');
+    dldbtn.setAttribute('href', pdffile_path);
+    dldbtn.setAttribute('download', filename);
+    if( dldbtn.style.display === "none"){
+      dldbtn.style.display = "inline-block";
+    }
+    }
+  </script>
+  <script src="vendor/prism/prism-php.min.js"></script>
+  <script src="vendor/prism/prism-json.min.js"></script>
+  <script src="vendor/prism/prism-markup.min.js"></script>
+  <script src="vendor/prism/prism-csharp.min.js"></script>
+  <script src="vendor/prism/prism-http.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+  <script src="custom/themechanger.js"></script>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('vendor/sw.js')
+    }
+  </script>
+  </body>
+
+</html>

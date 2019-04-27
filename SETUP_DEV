@@ -1,0 +1,16 @@
+=========================
+Docsify Starter Kit 
+
+by Alok Prateek
+
+=========================
+
+
+1. install git
+2. clone repo github@oxyenyos/docsify-starter-kit
+3. install node and npm
+4. install vs-code
+5. install yzane/markdown-pdf, mermade/openapi-lint, redhat/YAML
+6. install docsify-cli from npm as `npm install docsify-cli`
+7. serve folder locally as `docsify serve -p <port number>`
+8. or you could use task serve to serve at localhost:7777

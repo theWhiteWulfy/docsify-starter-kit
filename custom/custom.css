@@ -1,0 +1,200 @@
+:root {
+  /* Plugin: Copy Code */
+  --copycode-background: #808080;
+  --copycode-color: #fff;
+  /* Cover */
+  --navbar-menu-link-color: #000000;
+  --cover-background-color: #bbb;
+  --cover-heading-color: #111;
+  --cover-background-color: #3f7889;
+  --search-input-background-image: url(https://icongr.am/jam/search.svg?size=20&color=ffffff);
+  --strong-color: #fff;
+
+  /* Toggle */
+  --sidebar-toggle-offset-top: 0.5rem;
+  /*--sidebar-toggle-offset-top: 93.5vh;*/
+  --sidebar-toggle-height: 5ch;
+  --sidebar-toggle-width: 4ch;
+  --sidebar-toggle-background: transperent;
+  --sidebar-toggle-icon-color: #000;
+  --sidebar-toggle-border-radius: 0;
+  --sidebar-toggle-border-style: solid;
+  --sidebar-toggle-border-width: 0;
+  --sidebar-toggle-icon-height: 12px;
+  --sidebar-toggle-icon-stroke-width: 3px;
+  --sidebar-toggle-icon-width: 18px;
+  --sidebar-toggle-offset-left: 0;
+
+  /* Menus */
+  --navbar-menu-background: #3894d1;
+  --navbar-menu-border-color: #3894d1;
+  --navbar-menu-border-radius: var(--border-radius-m);
+  --navbar-menu-border-width: 0;
+  --navbar-menu-padding: 0.5em;
+
+  /* Menu Links */
+  --navbar-menu-link-background: #3894d1;
+  --navbar-menu-link-background--active: #3894d1;
+  --navbar-menu-link-background--hover: #3894d1;
+  --navbar-menu-link-border-color: #3894d1;
+  --navbar-menu-link-border-color--active: #3894d1;
+  --navbar-menu-link-border-color--hover: #3894d1;
+  --navbar-menu-link-color: #fff;
+  --navbar-menu-link-color--active: #fff;
+  --navbar-menu-link-color--hover: #fff;
+
+  /* Plugin: Search */
+  --search-margin                          : 0.5rem 0 0;
+  --search-input-background-color          : #555;
+  --search-input-background-color--focus   : #000;
+  --search-input-color                     : #FFF;
+  --search-input-placeholder-color         : #DDD;
+  --search-clear-icon-color1               : #000;
+  --search-input-border-width              : 0px;
+  
+  /* Sidebar */
+    --sidebar-background                          : #0077c7;
+    --sidebar-border-color                        : #000 ;
+    --sidebar-border-width                        : 0;
+    --sidebar-transition-duration                 : var(--duration-medium);
+    --sidebar-nav-strong-color                    : #fff;
+    --sidebar-nav-strong-font-size                : medium;
+    --sidebar-nav-strong-border-color             : transparent;
+    --sidebar-nav-strong-margin                   : 0;
+    --sidebar-nav-strong-color                    : #fff;
+    --sidebar-nav-link-color                      : #ddd;
+    --sidebar-nav-link-color--active              : #fff;
+    --sidebar-nav-link-color--hover               : #fff;
+    --sidebar-nav-link-border-radius              : 1ch;
+    --sidebar-nav-link-border-style               : solid;
+    --sidebar-nav-link-border-color               : transparent;
+    --sidebar-nav-link-border-style--active       : none;
+    --sidebar-nav-link-border-color--hover        : transparent;    
+    --sidebar-nav-link-border-style--hover        : dashed;
+    --sidebar-nav-link-border-color--hover        : #bbb;
+    --sidebar-nav-link-transition                 : all var(--duration-fast) ease-in-out;
+    --sidebar-nav-link-border-width               : 2px;
+    --sidebar-nav-link-border-width--active       : 2px;
+    --sidebar-nav-link-border-width--hover        : 2px;
+    --sidebar-nav-link-before-color               : #fff;
+    --sidebar-nav-link-before-color--active       : #000;
+    --sidebar-nav-link-font-weight--active        : 600;
+    --sidebar-nav-pagelink-padding                : 0em 0 0em 20px;
+    --sidebar-nav-link-padding                    : 0em 0 0em 20px;
+}
+
+.beta-version-tag::after {
+  content: "BETA";
+  font-size: smaller;
+  font-weight: 600;
+  background-color: yellow;
+  padding: 0.25rem 0.5rem;
+  margin-left: 1ch;
+  color: #000;
+}
+
+.beta-version-tag-nav::after {
+  content: "\03B2";
+  font-size: smaller;
+  font-weight: 600;
+  background-color: yellow;
+  padding: 0.25rem 0.5rem;
+  margin-left: 1ch;
+  color: #000;
+}
+
+.service-version-tag{
+  font-size: smaller;
+  font-weight: 600;
+  background-color: #38f348;
+  padding: 0.25rem 0.5rem;
+  margin-left: 1ch;
+  color: #000;
+}
+
+.btn-get-free-key {
+  background-color: #79c9ff;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-m);
+}
+
+.btn-other {
+  background-color: #0b87da;
+  color: #fff !important;  
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-m);
+  font: bold 11px Arial;
+  text-decoration: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+a.btn-other, a.btn-other:hover{
+  text-decoration: none;
+}
+
+.app-nav.no-badge {
+  background-color: #0b87da;
+  top: 0;
+  right: 0 !important;
+  left: 0rem;
+}
+
+.app-nav.no-badge ul {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.app-nav.no-badge ul li,
+.app-nav.no-badge ul li p a {
+  color: #fff;
+}
+
+.markdown-section {
+  padding-top: 9rem !important;
+}
+
+.sidebar-toggle {
+  z-index: 50 !important;
+}
+
+.sidebar .search .clear-button {
+    margin: 0 1ch 0 1ch;
+}   
+
+.sidebar>h1 {
+  margin-top: 1ch;
+  margin-bottom: -1.25ch;
+}
+
+.sidebar>h1 img {
+  max-width: 70%;
+}
+
+
+@media (max-width: 420px){
+  .app-nav.no-badge ul {
+    font-size: smaller;
+  }
+  .btn-get-free-key {
+    padding: 0.5rem 0.5rem;
+  }
+  :root{
+    --sidebar-toggle-offset-top: 0.2rem;
+    --navbar-root-margin: 0 0 0 0.75em;
+  }
+
+  .app-nav.no-badge ul {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+  }
+}
+
+small > strong {
+  color: #fff !important;
+}
+
+.sidebar-nav ul li p{
+  margin-block-start: 2ch;
+  margin-block-end: 0ch;
+}
